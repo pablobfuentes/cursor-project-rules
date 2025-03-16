@@ -1,0 +1,107 @@
+---
+title: Product Updates
+description: Stay up to date with the latest changes and improvements to Polar.
+---
+
+<Update label="2025-03-11">
+  ## Zapier integration officially launched
+
+We're excited to announce the official launch of our [Zapier integration](https://zapier.com/apps/polar/integrations)! Get started now and connect Polar to 2,000+ other web services.
+
+<Note>
+  We've focused on **triggers** (webhooks) for now, so you can react to events in Polar and trigger actions in other apps.
+
+Need to perform actions in Polar? Tell us about your use case [here](https://github.com/orgs/polarsource/discussions/new?category=integrations&labels=integrations%2Fzapier) and we'll consider adding more actions in the future.
+
+</Note>
+
+</Update>
+
+<Update label="2025-03-05">
+  ## Customer State
+
+Maybe one of our neatest features to date! Customer State is a concept allowing you to query for the current state of a customer, including their **active subscriptions** and **granted [benefits](/features/benefits/introduction)**, in a single [API call](/api-reference/customers/state-external) or single [webhook event](/api-reference/webhooks/customer.state_changed).
+
+Combined with the [External ID](/features/customer-management#external-id) feature, you can get up-and-running in minutes.
+
+[Read more](/integrate/customer-state)
+
+</Update>
+
+<Update label="2025-03-04">
+  ## Better Auth Plugin
+
+Integrating authentication and billing for your users has never been easier.
+
+<img src="/assets/changelog/2025-03-04/better_auth.jpeg" />
+
+[Better Auth](https://www.better-auth.com/) is an open source authentication framework for
+TypeScript that is quickly becoming a favorite amongst developers. Today, we're
+trilled to have shipped a Polar plugin for Better Auth - in collaboration with them.
+
+Checkout our [integration guide](/integrate/sdk/adapters/better-auth).
+
+</Update>
+
+<Update label="2025-02-27">
+  ## Customer External ID
+
+We've added support for an `external_id` field on Customers. We believe this will greatly simplify the reconciliation process between your system and Polar.
+
+Previously, the recommended way to reconcile with your users was to use `metadata`. However, this was not always the most convenient method, especially if you needed to fetch a Customer from our API.
+
+With `external_id`, you can now fetch a Customer directly by their external ID through dedicated `GET`, `PATCH`, and `DELETE` endpoints. You don't even need to store Polar's internal ID in your system anymore! [Read more](/features/customer-management#external-id)
+
+Of course, you can also directly preset `customer_external_id` when creating a Checkout Session, and it will automatically be set on the newly created Customer after a successful checkout. [Read more](/features/checkout/session#external-customer-id)
+
+</Update>
+
+<Update label="2025-02-19">
+  ## Polar's take on Product variants
+
+We've released big changes to how we handle products and pricing, allowing us to support a unique approach to what the industry typically calls **variants** 🔥
+
+We believe having a single product with multiple pricing models and benefits adds unneccessary complexity to the user and to the API. Instead, we chose to treat everything as a product, giving you maximum flexibility about the pricing and benefits you want to offer.
+
+Thus, we introduce support for **multiple products** at checkout, allowing customers to switch between them before purchasing. Typically, you can offer a monthly and a yearly product, with specific pricing and benefits for each.
+
+{" "}
+
+<img
+  className="block dark:hidden"
+  src="/assets/features/checkout/session/checkout_multiple_products.light.png"
+/>
+<img
+  className="hidden dark:block"
+  src="/assets/features/checkout/session/checkout_multiple_products.dark.png"
+/>
+
+This is available right now using the [Checkout Session API](/features/checkout/session) and [Checkout Links](/features/checkout/links).
+
+### Depreciations
+
+- Products can no longer have both a monthly and yearly pricing. Existing products still work, but you'll see a warning like this when trying to edit their pricing:
+
+{" "}
+
+<Frame>
+  <img
+    className="block dark:hidden h-[200px]"
+    src="/assets/changelog/2025-02-19/deprecated_pricing.light.png"
+  />
+  <img
+    className="hidden dark:block h-[200px]"
+    src="/assets/changelog/2025-02-19/deprecated_pricing.dark.png"
+  />
+</Frame>
+
+### API changes
+
+- The `product_id` and `product_price_id` fields are deprecated in the [Checkout Session API](/api-reference/checkouts/create-session). You should now use the `products` field to specify the products you want to include in the checkout.
+- The `type` and `recurring_interval` fields on `ProductPrice` are deprecated. `recurring_interval` is now set directly on `Product`.
+
+</Update>
+
+<Update label="2025-02-14">
+  New documentation platform. More improvements incoming.
+</Update>
