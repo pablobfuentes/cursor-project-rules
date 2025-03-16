@@ -11,6 +11,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Initial repository structure
 - Documentation for README and contributing guidelines
+- Comprehensive wiki with installation and usage guides
+- Convex database and backend services documentation
+- Polar payment integration documentation
 
 ## [1.0.0] - 2023-05-15
 

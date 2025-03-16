@@ -45,6 +45,8 @@ This repository includes documentation for:
 | Schematic            | Payment API integration and implementation                             |
 | Shadcn/UI            | Component installation and usage patterns                              |
 | TailwindCSS v4       | Latest Tailwind CSS client-side implementation                         |
+| Convex               | Complete guide for Convex database and backend services                |
+| Polar                | Documentation for Polar payment integration and implementation         |
 
 ## 🚀 Getting Started
 
@@ -84,6 +86,8 @@ Once installed, the Cursor AI will automatically have access to these rules. You
 "Set up an AI chat interface using the AI SDK with OpenAI provider"
 "Implement a payment form with Schematic"
 "Add a shadcn/ui dropdown component"
+"Set up a Convex database and add CRUD operations"
+"Implement subscription payments with Polar"
 ```
 
 ## 🤝 Contributing

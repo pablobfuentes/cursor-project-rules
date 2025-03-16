@@ -80,6 +80,34 @@ Here are some example prompts you can use to leverage the documentation:
 "How do I use the new features in TailwindCSS v4?"
 ```
 
+### Convex Examples
+
+```
+"Set up a Convex backend for my Next.js application"
+```
+
+```
+"How do I create a schema and database tables with Convex?"
+```
+
+```
+"Implement CRUD operations with Convex in my React app"
+```
+
+### Polar Payment Examples
+
+```
+"Set up Polar for subscription payments in my application"
+```
+
+```
+"How do I implement usage-based pricing with Polar?"
+```
+
+```
+"Create a checkout page with Polar payments"
+```
+
 ## Advanced Usage Patterns
 
 ### Combining Multiple Technologies
@@ -92,6 +120,10 @@ Cursor AI can help you integrate multiple technologies together:
 
 ```
 "Build a subscription dashboard that uses Schematic for payments and the AI SDK for analytics"
+```
+
+```
+"Create a SaaS application with Convex as the backend, Clerk for authentication, and Polar for payments"
 ```
 
 ### Complex Implementation Examples
@@ -108,6 +140,16 @@ For more complex implementations, provide context and specific requirements:
 How should I approach this?"
 ```
 
+```
+"I'm building a SaaS app with these requirements:
+1. Convex database for the backend
+2. Clerk for user authentication
+3. Polar for subscription management
+4. TailwindCSS and shadcn for the UI
+
+How should I structure this project?"
+```
+
 ### Code Refactoring
 
 You can ask for help refactoring existing code to use these technologies:
@@ -118,6 +160,10 @@ You can ask for help refactoring existing code to use these technologies:
 
 ```
 "My application uses regular CSS. How can I convert it to use TailwindCSS v4?"
+```
+
+```
+"I'm using Firebase as my backend. How can I migrate to Convex?"
 ```
 
 ## Best Practices

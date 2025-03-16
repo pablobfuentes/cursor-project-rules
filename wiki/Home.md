@@ -30,6 +30,8 @@ The repository includes documentation for:
 - [Schematic](Schematic) - Payment API integration
 - [Shadcn/UI](Shadcn-UI) - Component installation and usage
 - [TailwindCSS v4](TailwindCSS-v4) - Latest Tailwind CSS implementation
+- [Convex](Convex) - Complete guide for Convex database and backend services
+- [Polar](Polar) - Documentation for Polar payment integration and implementation
 
 ## Developer Resources
 
