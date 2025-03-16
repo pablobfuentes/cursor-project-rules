@@ -1,0 +1,57 @@
+---
+title: PHP
+
+slug: developer_resources/sdks/php
+---
+
+
+### Installation
+
+The PHP SDK is hosted on composer ([here](https://packagist.org/packages/schematichq/schematic-php)).
+
+```bash
+composer require schematichq/schematic-php
+```
+
+### Initialization
+
+Initialize a client with an [API key secret](/quickstart#create-an-api-key).
+
+```php
+use Schematic\Schematic;
+
+$schematic = new Schematic($apiKey, ['basePath' => $apiUrl]);
+```
+
+### Usage example
+
+Once the client is initialized, you may use the SDK to make requests. Below is an example of creating a table for all companies stored in Schematic.
+
+```php
+<?php
+try {
+    $schematic = new Schematic($apiKey, ['basePath' => $apiUrl]);
+
+    $response = $schematic->CompaniesApi->listCompanies();
+    $companies = $response->getData();
+} catch (\Exception $e) {
+    report($e);
+}?>
+
+<table>
+    <thead>
+        <tr>
+            <th>Company ID</th>
+            <th>Company Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach ($companies as $company): ?>
+        <tr>
+            <td><?php echo $company->getId(); ?></td>
+            <td><?php echo $company->getName(); ?></td>
+        </tr>
+        <?php endforeach; ?>
+    </tbody>
+</table>
+```

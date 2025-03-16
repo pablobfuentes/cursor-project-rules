@@ -1,0 +1,25 @@
+---
+title: Environments
+
+slug: developer_resources/environments
+---
+
+
+Schematic supports multiple environments (e.g. development and production) to support your development workflow.
+
+Resources in Schematic are predominately environment-scoped, but some are available account-wide (regardless of the selected environment).
+
+## Account Scoped Resources
+
+Account scoped resources are the same across all environments. For example, a plan is scoped to your entire Account, so whenever you make a plan, it is accessible and consistent across all environments. This makes it easy to prepare plans in development and then roll them out production without additional release work.
+
+| Resource type | Definition / Notes |
+| --- | --- |
+| Environment | An environment (e.g. development, staging, production) |
+| Plan | A plan is a collection of features that can be assigned to a company |
+| Feature | A feature is a product or service that can be enabled or disabled for a company |
+| Feature flag | A feature flag is a way to enable or disable a feature for a company |
+
+## Special Case
+
+API keys are always environment-specific, but API keys from all environments are always shown in the settings page.
